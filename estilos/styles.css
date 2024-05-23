@@ -1,0 +1,111 @@
+body {
+    background-color: #1B1D29;
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+header {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+header nav a {
+    color: #DB5656;
+    margin: 0 20px;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+    padding-bottom: 8px;
+}
+header nav a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #E84848;
+}
+
+main {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin: 20px auto;
+}
+.left {
+    width: 50%;
+    color: #FFFFFF;
+}
+
+.left strong{
+    color:#DB5656;
+}
+
+.left-link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+.left-link-redes{
+    width: 35%;
+    text-decoration: none;
+    padding: 10px;
+    margin-bottom: 20px;
+    color: #DB5656;
+    border: 3px;
+    border-style: solid;
+    border-color: #DB5656;
+    border-radius: 10px;
+}
+
+.right {
+    width: 50%;
+    text-align: right;
+}
+.right img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 5%;
+}
+footer {
+    width: 100%;
+    background-color: #1B1D29;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+}
+@media (max-width: 768px) {
+    main {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .left, .right {
+        width: 100%;
+        text-align: center;
+    }
+    .right {
+        margin-top: 20px;
+    }
+}
+@media (max-width: 480px) {
+    header nav a {
+        display: block;
+        margin: 10px 0;
+    }
+    main {
+        width: 90%;
+    }
+}
